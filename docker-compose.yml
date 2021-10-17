@@ -1,0 +1,25 @@
+version: '3.4'
+services:
+  web:
+    build:
+      context: .
+      target: development
+    image: tic_tac_toe_api
+    env_file:
+      - development.env
+    command: npm run dev
+    ports:
+      - 3000:3000
+      - 9229:9229
+    volumes:
+      - .:/home/app
+      - /home/app/node_modules
+    networks:
+      - tic-tac-toe-net
+
+volumes:
+  dbdata:
+
+networks:
+  tic-tac-toe-net:
+    driver: bridge
