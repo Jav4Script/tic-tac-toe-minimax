@@ -178,6 +178,7 @@ export default class Board {
             '\n\u2015\u2015\u2015 \u2015\u2015\u2015 \u2015\u2015\u2015\n';
       }
     });
+    // eslint-disable-next-line no-console
     console.log(`\n\n${formattedString}`);
   }
 }

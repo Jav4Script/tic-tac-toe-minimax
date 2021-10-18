@@ -24,6 +24,7 @@ const application =
       const serverExpress = server.listen(port, hostname, () => {
         const address = serverExpress.address() as net.AddressInfo;
 
+        // eslint-disable-next-line no-console
         console.log(`🎉 App is running on port ${address.port}`);
 
         resolve(serverExpress);

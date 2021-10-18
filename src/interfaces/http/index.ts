@@ -5,12 +5,12 @@ interface Container {
   routes: Router;
 }
 
-export interface HttpServer {
-  makeHttpApplication(container: Container): HttpApplication;
-}
-
 export interface HttpApplication {
   start(): http.Server;
+}
+
+export interface HttpServer {
+  makeHttpApplication(container: Container): HttpApplication;
 }
 
 const server = (): HttpServer => {
